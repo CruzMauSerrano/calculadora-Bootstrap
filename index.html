@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Propinas</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mb-4">Calculadora de Propinas</h1>
+        
+        <div class="form-group">
+            <label for="totalFactura">Total de la Factura:</label>
+            <input type="number" class="form-control" id="totalFactura" placeholder="Introduce el total de la factura">
+        </div>
+        
+        <div class="form-group">
+            <label for="porcentajePropina">Porcentaje de Propina:</label>
+            <input type="number" class="form-control" id="porcentajePropina" placeholder="Ingrese el porcentaje de propina">
+        </div>
+        
+        <button id="calcularBtn" class="btn btn-primary">Calcular</button>
+        
+        <div class="result-section mt-4">
+            <h2>Resultado:</h2>
+            <div class="form-group">
+                <label class="result-label">Total de la Factura:</label>
+                <span id="resultadoTotalFactura"></span>
+            </div>
+            <div class="form-group">
+                <label class="result-label">Propina Calculada:</label>
+                <span id="resultadoPropina"></span>
+            </div>
+            <div class="form-group">
+                <label class="result-label">Total con Propina:</label>
+                <span id="resultadoTotalConPropina"></span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade" id="resultadoModal" tabindex="-1" aria-labelledby="resultadoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="resultadoModalLabel">Detalle de la Factura</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label class="result-label">Total de la Factura:</label>
+                        <span id="modalTotalFactura"></span>
+                    </div>
+                    <div class="form-group">
+                        <label class="result-label">Propina Calculada:</label>
+                        <span id="modalPropina"></span>
+                    </div>
+                    <div class="form-group">
+                        <label class="result-label">Total con Propina:</label>
+                        <span id="modalTotalConPropina"></span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
